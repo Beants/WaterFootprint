@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang = "zh-CN" >
+<head >
+	<meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge" >
+	<meta name = "viewport" content = "width=device-width, initial-scale=1" >
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title >主页</title >
+
+	<!-- Bootstrap -->
+	<link href = "../static/css/bootstrap.min.css" rel = "stylesheet" >
+	<link href = "../static/css/index.css" rel = "stylesheet" >
+
+</head >
+<body >
+<nav class = "navbar navbar-inverse navbar-fixed-top" >
+	<div class = "container-fluid" >
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class = "navbar-header" >
+			<a class = "navbar-brand" href = "#" >主要省份水足迹分布可视化系统</a >
+		</div >
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1" >
+			<ul class = "nav navbar-nav" >
+				<li class = "active" ><a href = "{{ url_for('main') }}" >主页 <span
+						class = "sr-only" >(current)</span ></a ></li >
+
+			</ul >
+			<ul class = "nav navbar-nav navbar-right" >
+				<li class = "dropdown" >
+					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button"
+					   aria-haspopup = "true" aria-expanded = "false" >{{ name }} <span class = "caret" ></span ></a >
+					<ul class = "dropdown-menu" >
+						<li ><a href = "{{ url_for('logout') }}" >注销</a ></li >
+					</ul >
+				</li >
+			</ul >
+		</div ><!-- /.navbar-collapse -->
+	</div ><!-- /.container-fluid -->
+</nav >
+<div class = "container-fluid" >
+	<div class = "row" >
+		<div class = "col-sm-3 col-md-2 sidebar" >
+			<ul class = "nav nav-sidebar" role = "tablist" >
+				<li role = "presentation" class = "active" ><a href = "#home" aria-controls = "home" role = "tab"
+				                                               data-toggle = "tab" >主页</a ></li >
+				<br >
+
+				<li role = "presentation" ><a href = "#chart1" aria-controls = "chart1" role = "tab"
+				                              data-toggle = "tab" >盒须图</a ></li >
+				<li role = "presentation" ><a href = "#chart2" aria-controls = "chart2" role = "tab"
+				                              data-toggle = "tab" >柱状图</a ></li >
+				<li role = "presentation" ><a href = "#chart3" aria-controls = "chart3" role = "tab"
+				                              data-toggle = "tab" >热力图</a ></li >
+				<li role = "presentation" ><a href = "#chart4" aria-controls = "chart4" role = "tab"
+				                              data-toggle = "tab" >折线图</a ></li >
+				<li role = "presentation" ><a href = "#chart5" aria-controls = "chart5" role = "tab"
+				                              data-toggle = "tab" >气泡图</a ></li >
+				<li role = "presentation" ><a href = "#chart6" aria-controls = "chart6" role = "tab"
+				                              data-toggle = "tab" >瀑布图</a ></li >
+				<li role = "presentation" ><a href = "#chart7" aria-controls = "chart7" role = "tab"
+				                              data-toggle = "tab" >堆叠柱形图</a ></li >
+
+			</ul >
+
+		</div >
+		<div class = "col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" >
+			<h1 class = "page-header" >数据展示</h1 >
+			<div class = "tab-content" align = "center" >
+				<div role = "tabpanel" class = "tab-pane active" id = "home" >
+					<iframe name = "toppage" marginwidth = 0 marginheight = 0
+					        frameborder = "no" height = '600px' width = "1080px"
+					        src = "{{ url_for('static', filename='html/home.html') }}" ></iframe >
+				</div >
+				<div role = "tabpanel" class = "tab-pane" id = "chart1" >
+					<iframe name = "toppage" marginwidth = 0 marginheight = 0
+					        frameborder = "no" height = '600px' width = "1080px"
+					        src = "{{ url_for('static', filename='html/chart1.html') }}" ></iframe >
+				</div >
+				<div role = "tabpanel" class = "tab-pane" id = "chart2" >
+					<iframe name = "toppage" marginwidth = 0 marginheight = 0
+					        frameborder = "no" height = '600px' width = "1080px"
+					        src = "{{ url_for('static', filename='html/chart2.html') }}" ></iframe >
+
+				</div >
+				<div role = "tabpanel" class = "tab-pane" id = "chart3" >
+					<iframe name = "toppage" marginwidth = 0 marginheight = 0
+					        frameborder = "no" height = '600px' width = "1080px"
+					        src = "{{ url_for('static', filename='html/chart3.html') }}" ></iframe >
+				</div >
+				<div role = "tabpanel" class = "tab-pane" id = "chart4" >
+					<iframe name = "toppage" marginwidth = 0 marginheight = 0
+					        frameborder = "no" height = '600px' width = "1080px"
+					        src = "{{ url_for('static', filename='html/chart4.html') }}" ></iframe >
+				</div >
+				<div role = "tabpanel" class = "tab-pane" id = "chart5" >
+					<iframe name = "toppage" marginwidth = 0 marginheight = 0
+					        frameborder = "no" height = '600px' width = "1080px"
+					        src = "{{ url_for('static', filename='html/chart5.html') }}" ></iframe >
+				</div >
+				<div role = "tabpanel" class = "tab-pane" id = "chart6" >
+					<iframe name = "toppage" marginwidth = 0 marginheight = 0
+					        frameborder = "no" height = '600px' width = "1080px"
+					        src = "{{ url_for('static', filename='html/chart6.html') }}" ></iframe >
+				</div >
+				<div role = "tabpanel" class = "tab-pane" id = "chart7" >
+					<iframe name = "toppage" marginwidth = 0 marginheight = 0
+					        frameborder = "no" height = '600px' width = "1080px"
+					        src = "{{ url_for('static', filename='html/chart7.html') }}" ></iframe >
+				</div >
+			</div >
+
+		</div >
+	</div >
+</div >
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src = "https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" ></script >
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src = "https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" ></script >
+<script >
+</script >
+</body >
+</html >
